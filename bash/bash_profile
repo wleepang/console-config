@@ -11,7 +11,7 @@ source $GIT_CORE/git-completion.bash
 source $GIT_CORE/git-prompt.sh
 
 # export TERM="xterm-color"
-PS1='\n\[\e[2m\]\D{(%W) %F %T}\[\e[0m\]\n\[\e[1;33m\]\u\[\e[0m\]@\[\e[1;32m\]\h\[\e[0m\]: \[\e[1;34m\]\w\[\e[0m\]$(__git_ps1)\n\$ '
+PS1='\n\[\e[1;33m\]\u\[\e[0m\]@\[\e[1;32m\]\h\[\e[0m\]: \[\e[2m\]\D{(%W) %F %T}\[\e[0m\]\n\[\e[1;34m\]\w\[\e[0m\]$(__git_ps1)\n\$ '
 
 # aliases
 alias ls="ls -CF"
