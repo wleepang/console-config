@@ -1,7 +1,6 @@
 # colorize ls
 export CLICOLOR=1
 export TERM='xterm-256color'
-# export LSCOLORS=Exfxcxdxbxegedabagacad
 
 # highlight matches in grep
 # export GREP_OPTIONS='--color=auto'
@@ -12,11 +11,10 @@ if [ -d "$GIT_CORE" ]; then
   source $GIT_CORE/git-prompt.sh
 fi
 
-# export TERM="xterm-color"
-PS1='\n\[\e[1;33m\]\u\[\e[0m\]@\[\e[1;32m\]\h\[\e[0m\]: \[\e[2m\]\D{(%W) %F %T}\[\e[0m\]\n\[\e[1;34m\]\w\[\e[0m\]$(__git_ps1)\n\$ '
+PS1='\n\[\e[1;33m\]\u\[\e[0m\]@\[\e[1;32m\]\h\[\e[0m\]: \[\e[2m\]\D{(%W) %F %T}\[\e[0m\]\n\[\e[1;34m\]\w\[\e[0m\]`__git_ps1`\n\$ '
 
 # aliases
-alias ls="ls -CF"
+alias ls="ls -CF --color=auto --show-control-chars"
 alias ll="ls -lhA"
 
 # added by Anaconda3 2.3.0 installer
