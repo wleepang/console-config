@@ -15,7 +15,16 @@ fi
 PS1='\n\[\e[1;33m\]\u\[\e[0m\]@\[\e[1;32m\]\h\[\e[0m\]: \[\e[2m\]\D{(%W) %F %T}\[\e[0m\]\n\[\e[1;34m\]\w\[\e[0m\]`__git_ps1`\n\$ '
 
 # aliases
-alias ls="ls -CF --color=auto --show-control-chars"
+# some bash shells ship with old GNU coreutils (e.g. Darwin)
+# check that `long` options are allowed
+LS_OPTIONS='--color=auto --show-control-chars'
+
+# test ls silently:
+ls $LS_OPTIONS 1>/dev/null 2>/dev/null
+if (( $? == 0 )); then
+  alias ls="ls -CF --color=auto --show-control-chars"
+fi
+
 alias ll="ls -lhA"
 
 # added by Anaconda3 2.3.0 installer
