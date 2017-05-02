@@ -5,6 +5,7 @@ export TERM='xterm-256color'
 # highlight matches in grep
 # export GREP_OPTIONS='--color=auto'
 
+# locate and load git shell functions if they are on a non-standard path
 GIT_CORE='/Applications/Xcode.app/Contents/Developer/usr/share/git-core'
 if [ -d "$GIT_CORE" ]; then
   source $GIT_CORE/git-completion.bash
