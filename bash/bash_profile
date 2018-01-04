@@ -6,7 +6,7 @@ export TERM='xterm-256color'
 # export GREP_OPTIONS='--color=auto'
 
 # locate and load git shell functions if they are on a non-standard path
-GIT_CORE='/Applications/Xcode.app/Contents/Developer/usr/share/git-core'
+GIT_CORE='/Library/Developer/CommandLineTools/usr/share/git-core'
 if [ -d "$GIT_CORE" ]; then
   source $GIT_CORE/git-completion.bash
   source $GIT_CORE/git-prompt.sh
@@ -27,13 +27,3 @@ fi
 
 alias ll="ls -lhA"
 
-# added by Anaconda3 2.3.0 installer
-export PATH="/Users/wleepang/anaconda/bin:$PATH"
-
-# postgresql shortcuts
-alias pg_start="pg_ctl -D /usr/local/pgsql/data -l /usr/local/var/log/pgsql.log start"
-alias pg_stop="pg_ctl -D /usr/local/pgsql/data stop"
-alias pg_status="pg_ctl -D /usr/local/pgsql/data status"
-
-# vpn aliases
-alias cisco="/opt/cisco/anyconnect/bin/vpn"
